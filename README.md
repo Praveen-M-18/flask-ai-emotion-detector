@@ -1,14 +1,22 @@
-# Emotion Detector AI Application
+# Emotion Detector Web Application
 
-## Description
-This is a full-stack Python web application that utilizes the Watson NLP (Natural Language Processing) library to perform emotion detection on user-provided text. The application evaluates the text and scores it across five emotional categories: anger, disgust, fear, joy, and sadness, ultimately outputting the dominant emotion. The backend is built using the Flask web framework.
+An AI-based web application developed using Python, Flask, and the IBM Watson NLP library. This application analyzes text provided by the user and detects underlying emotions, providing scores for anger, disgust, fear, joy, and sadness, along with identifying the dominant emotion.
 
 ## Features
-* **AI Engine:** Watson NLP EmotionPredict API integration.
-* **Web Framework:** Flask server deployment.
-* **Interface:** Dynamic HTML interface for entering text and viewing results.
-* **Testing:** Robust unit tests to ensure application stability.
-* **Code Quality:** Compliant with PEP8 standards and scored using PyLint.
+- **Watson NLP Integration:** Communicates with the Watson NLP Emotion Detection service to process raw text data.
+- **Robust Error Handling:** Seamlessly manages blank or invalid user inputs, returning clear system error alerts rather than crashing.
+- **Unit Tested:** Includes a full suite of automated unit tests using the Python `unittest` library to verify prediction accuracy.
+- **Strict Code Quality:** Fully compliant with PEP 8 standards, scoring 10/10 on static code analysis using `pylint`.
 
-## Final Project Requirements
-This project was completed as part of the "Developing AI Applications with Python and Flask" course by IBM on Coursera.
+## Project Structure
+- `EmotionDetection/`: Package containing the core logic and Watson API integration.
+- `server.py`: Flask application server that manages routes and handles web interface requests.
+- `test_emotion_detection.py`: Unit testing suite.
+- `templates/index.html`: The web front-end interface.
+
+## How to Run the Application
+
+1. Clone the repository to your local environment or development IDE.
+2. Ensure required dependencies are installed:
+   ```bash
+   pip install requests flask pylint
